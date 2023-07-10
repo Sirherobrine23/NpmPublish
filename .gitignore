@@ -1,0 +1,3 @@
+# Node and root lock files
+node_modules/
+/*-lock*

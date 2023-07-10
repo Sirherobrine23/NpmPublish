@@ -1,0 +1,17 @@
+name: Dynamic npm Publish
+description: "Publish to Registry dynamic to Monorepo and Single packages"
+inputs:
+  package-path:
+    description: "Local package json"
+    required: false
+    default: "./package.json"
+  token:
+    description: "Registry token to Publish"
+    required: false
+  npmargs:
+    description: "extra args to npm"
+    required: false
+runs:
+  using: node16
+  pre: "scripts/pre_install.cjs"
+  main: "src/index.js"
